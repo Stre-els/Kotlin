@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_view"
+    app:startDestination="@id/helloUserFragment">
+
+    <fragment
+        android:id="@+id/helloUserFragment"
+        android:name="com.example.labworkinformatika.HelloUserFragment"
+        android:label="fragment_hello_user"
+        tools:layout="@layout/fragment_hello_user" >
+        <action
+            android:id="@+id/action_helloUserFragment_to_listPrimerFragment"
+            app:destination="@id/listPrimerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPrimerFragment"
+        android:name="com.example.labworkinformatika.ListPrimerFragment"
+        android:label="fragment_list_primer"
+        tools:layout="@layout/fragment_list_primer" >
+        <action
+            android:id="@+id/action_listPrimerFragment_to_primerViewFragment"
+            app:destination="@id/primerViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/primerViewFragment"
+        android:name="com.example.labworkinformatika.PrimerViewFragment"
+        android:label="fragment_primer_view"
+        tools:layout="@layout/fragment_primer_view" />
+</navigation>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrimerViewFragment">
+
+    <EditText
+        android:id="@+id/editXtext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="8dp"
+        android:paddingStart="18dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewX"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewX"
+        app:layout_constraintTop_toTopOf="@+id/textViewX" />
+
+    <TextView
+        android:id="@+id/textViewX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:text="X: "
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/formula_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Y: "
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewX"
+        app:layout_constraintTop_toBottomOf="@+id/textViewX" />
+
+    <EditText
+        android:id="@+id/editYtext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/custom_edit_text"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="8dp"
+        android:paddingStart="18dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewY"
+        app:layout_constraintEnd_toEndOf="@+id/editXtext"
+        app:layout_constraintStart_toStartOf="@+id/editXtext"
+        app:layout_constraintTop_toTopOf="@+id/textViewY" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Ответ:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewY"
+        app:layout_constraintTop_toBottomOf="@+id/editYtext" />
+
+    <TextView
+        android:id="@+id/textViewAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Answer"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custom_button"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Решить"
+        android:textAllCaps="false"
+        android:textColor="@drawable/custom_button"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAnswer" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonPrimerBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/custom_button"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Назад"
+        android:textAllCaps="false"
+        android:textColor="@drawable/custom_button"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
