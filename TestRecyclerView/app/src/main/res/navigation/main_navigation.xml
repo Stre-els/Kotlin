@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainMenuFragment">
+
+    <fragment
+        android:id="@+id/addNewFragment"
+        android:name="com.example.testrecyclerview.AddNewFragment"
+        tools:layout="@layout/fragment_add_new" />
+    <fragment
+        android:id="@+id/listNewFragment"
+        android:name="com.example.testrecyclerview.ListNewFragment"
+        tools:layout="@layout/fragment_list_new" >
+        <action
+            android:id="@+id/action_listNewFragment_to_mostInfNewsFragment"
+            app:destination="@id/mostInfNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.testrecyclerview.MainMenuFragment"
+
+        tools:layout="@layout/fragment_main_menu" />
+    <fragment
+        android:id="@+id/mostInfNewsFragment"
+        android:name="com.example.testrecyclerview.MostInfNewsFragment"
+        android:label="fragment_most_inf_news"
+        tools:layout="@layout/fragment_most_inf_news" />
+</navigation>

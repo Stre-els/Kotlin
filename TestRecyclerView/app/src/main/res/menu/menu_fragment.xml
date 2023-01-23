@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/listNewFragment"
+        android:icon="@drawable/ic_baseline_newspaper_24"
+        android:title="Новости"/>
+    <item
+        android:id="@+id/mainMenuFragment"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Домой" />
+    <item
+        android:id="@+id/addNewFragment"
+        android:icon="@drawable/ic_baseline_add_comment_24"
+        android:title="Добавить" />
+</menu>

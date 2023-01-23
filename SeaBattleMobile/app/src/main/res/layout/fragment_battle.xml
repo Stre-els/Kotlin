@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BattleFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNumberX"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewPositionShipPlayer"
+        app:layout_constraintEnd_toEndOf="@+id/viewPositionShipPlayer"
+        app:layout_constraintStart_toStartOf="@+id/viewPositionShipPlayer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNumberY"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPositionShipPlayer"
+        app:layout_constraintEnd_toStartOf="@+id/viewPositionShipPlayer"
+        app:layout_constraintTop_toTopOf="@+id/viewPositionShipPlayer" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:text="Y\\X"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewNumberY"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerViewNumberX" />
+
+    <TextView
+        android:id="@+id/textViewIsPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Player 1"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewNumberX"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewPositionShipPlayer"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/main_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonViewMyMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_button"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:text="View my ship"
+        android:textAllCaps="false"
+        android:textColor="@drawable/custom_button"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewPositionShipPlayer"
+        app:layout_constraintStart_toEndOf="@+id/recyclerViewNumberY"
+        app:layout_constraintTop_toBottomOf="@+id/viewPositionShipPlayer" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Battle book"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/recyclerViewNumberY"
+        app:layout_constraintTop_toBottomOf="@+id/buttonViewMyMap" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewBattleLog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/custom_text_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/viewPositionShipPlayer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/recyclerViewNumberY"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
