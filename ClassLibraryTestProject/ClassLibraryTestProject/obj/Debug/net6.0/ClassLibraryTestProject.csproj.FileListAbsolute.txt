@@ -1,0 +1,12 @@
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\bin\Debug\net6.0\ClassLibraryTestProject.deps.json
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\bin\Debug\net6.0\ClassLibraryTestProject.dll
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\bin\Debug\net6.0\ClassLibraryTestProject.pdb
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\obj\Debug\net6.0\ClassLibraryTestProject.csproj.AssemblyReference.cache
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\obj\Debug\net6.0\ClassLibraryTestProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\obj\Debug\net6.0\ClassLibraryTestProject.AssemblyInfoInputs.cache
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\obj\Debug\net6.0\ClassLibraryTestProject.AssemblyInfo.cs
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\obj\Debug\net6.0\ClassLibraryTestProject.csproj.CoreCompileInputs.cache
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\obj\Debug\net6.0\ClassLibraryTestProject.dll
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\obj\Debug\net6.0\refint\ClassLibraryTestProject.dll
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\obj\Debug\net6.0\ClassLibraryTestProject.pdb
+C:\Users\Streels\Documents\C#\ClassLibraryTestProject\ClassLibraryTestProject\obj\Debug\net6.0\ref\ClassLibraryTestProject.dll

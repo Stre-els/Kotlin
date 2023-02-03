@@ -1,0 +1,85 @@
+#
+В базе данных MS SQL Server есть продукты и категории. Одному продукту может соответствовать много категорий, в одной категории может быть много продуктов. Напишите SQL запрос для выбора всех пар «Имя продукта – Имя категории». Если у продукта нет категорий, то его имя все равно должно выводиться.
+#
+
+
+#Sql-запрос на создание таблиц. SSMS сгенерировал автоматически.
+USE [TestDataBase]
+GO
+
+/****** Object:  Table [dbo].[Product]    Script Date: 03.02.2023 15:52:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Product](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](50) NULL,
+ CONSTRAINT [PK_Product] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [TestDataBase]
+GO
+
+/****** Object:  Table [dbo].[Category]    Script Date: 03.02.2023 15:52:50 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Category](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](50) NULL,
+ CONSTRAINT [PK_Category] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [TestDataBase]
+GO
+
+/****** Object:  Table [dbo].[TempTable]    Script Date: 03.02.2023 15:53:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TempTable](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[id_product] [int] NULL,
+	[id_category] [int] NULL,
+ CONSTRAINT [PK_TempTable] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[TempTable]  WITH CHECK ADD  CONSTRAINT [FK_TempTable_Category] FOREIGN KEY([id_category])
+REFERENCES [dbo].[Category] ([id])
+GO
+
+ALTER TABLE [dbo].[TempTable] CHECK CONSTRAINT [FK_TempTable_Category]
+GO
+
+ALTER TABLE [dbo].[TempTable]  WITH CHECK ADD  CONSTRAINT [FK_TempTable_Product] FOREIGN KEY([id_product])
+REFERENCES [dbo].[Product] ([id])
+GO
+
+ALTER TABLE [dbo].[TempTable] CHECK CONSTRAINT [FK_TempTable_Product]
+GO
+
+#SQL-запрос по заданию.
+select Product.name, Category.name from Product 
+left join TempTable on Product.Id = TempTable.id_product
+left join Category on Category.id = TempTable.id_category;
